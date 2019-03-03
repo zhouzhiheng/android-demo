@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到TextView演示页面"
+        android:id="@+id/btn_text_view"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到Button演示页面"
+        android:id="@+id/btn_button_view"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到EditText演示页面"
+        android:id="@+id/btn_edittext_view"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到RadioButton演示页面"
+        android:id="@+id/btn_radioButton_view"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"/>
+</LinearLayout>

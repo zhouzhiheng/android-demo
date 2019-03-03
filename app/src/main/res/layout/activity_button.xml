@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!--字体颜色以及背景色-->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮1"
+        android:textSize="20dp"
+        android:textColor="#ff0033"
+        android:background="#FFD700"/>
+
+    <!--圆角-->
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮2"
+        android:layout_below="@+id/btn_1"
+        android:layout_marginTop="10dp"
+        android:textColor="#ff0033"
+        android:background="@drawable/btn_2"
+        android:textSize="20dp"
+        />
+
+    <!--描边-->
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮3"
+        android:layout_below="@+id/btn_2"
+        android:layout_marginTop="10dp"
+        android:textColor="#7FFF00"
+        android:background="@drawable/btn_3"
+        android:textSize="20dp"
+        />
+
+    <!--点击更换颜色-->
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮4"
+        android:layout_below="@+id/btn_3"
+        android:layout_marginTop="10dp"
+        android:textColor="#7FFF00"
+        android:background="@drawable/btn_selector"
+        android:textSize="20dp"
+        />
+
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮5"
+        android:layout_below="@+id/btn_4"
+        android:layout_marginTop="10dp"
+        android:textColor="#7FFF00"
+        android:background="@drawable/btn_selector"
+        android:textSize="20dp"
+        android:onClick="showToast"
+        />
+</RelativeLayout>

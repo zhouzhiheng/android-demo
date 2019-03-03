@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--当按钮被按下时触发-->
+    <item android:state_pressed="true">
+        <shape>
+            <solid
+                android:color="#221067"/>
+            <corners
+                android:radius="2dp"/>
+        </shape>
+    </item>
+
+    <!--当按钮被松开时-->
+    <item android:state_pressed="false">
+        <shape>
+            <solid
+                android:color="#4822DD"/>
+            <corners
+                android:radius="0dp"/>
+        </shape>
+    </item>
+</selector>
