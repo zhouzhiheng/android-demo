@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnButtonView;
     private Button btnEditTextView;
     private Button btnRadioButtonView;
+    private Button btnCheckButtonView;
+
 
     private void setListeners(){
         OnClick onClick = new OnClick();
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
         btnButtonView.setOnClickListener(onClick);
         btnEditTextView.setOnClickListener(onClick);
         btnRadioButtonView.setOnClickListener(onClick);
+        btnCheckButtonView.setOnClickListener(onClick);
+
     }
 
     private class OnClick implements View.OnClickListener{
@@ -38,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_radioButton_view:
                     intent = new Intent(MainActivity.this, RadioButtonActivity.class);
                     break;
+                case R.id.btn_CheckButton_view:
+                    intent = new Intent(MainActivity.this, CheckButtonActivity.class);
+                    break;
             }
             startActivity(intent);
         }
@@ -52,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         btnButtonView = findViewById(R.id.btn_button_view);
         btnEditTextView = findViewById(R.id.btn_edittext_view);
         btnRadioButtonView = findViewById(R.id.btn_radioButton_view);
+        btnCheckButtonView = findViewById(R.id.btn_CheckButton_view);
         setListeners();
     }
 }
