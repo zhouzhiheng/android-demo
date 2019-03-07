@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.opsigte.demo.listView.ListViewActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button btnTextView;
@@ -13,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnEditTextView;
     private Button btnRadioButtonView;
     private Button btnCheckButtonView;
+    private Button btnImageView;
+    private Button btnListView;
 
 
     private void setListeners(){
@@ -22,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         btnEditTextView.setOnClickListener(onClick);
         btnRadioButtonView.setOnClickListener(onClick);
         btnCheckButtonView.setOnClickListener(onClick);
+        btnImageView.setOnClickListener(onClick);
+        btnListView.setOnClickListener(onClick);
 
     }
 
@@ -45,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_CheckButton_view:
                     intent = new Intent(MainActivity.this, CheckButtonActivity.class);
                     break;
+                case R.id.btn_Image_view:
+                    intent = new Intent(MainActivity.this, ImageViewActivity.class);
+                    break;
+                case R.id.btn_list_view:
+                    intent = new Intent(MainActivity.this, ListViewActivity.class);
+                    break;
             }
             startActivity(intent);
         }
@@ -61,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         btnEditTextView = findViewById(R.id.btn_edittext_view);
         btnRadioButtonView = findViewById(R.id.btn_radioButton_view);
         btnCheckButtonView = findViewById(R.id.btn_CheckButton_view);
+        btnImageView = findViewById(R.id.btn_Image_view);
+        btnListView = findViewById(R.id.btn_list_view);
         setListeners();
     }
 }

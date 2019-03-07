@@ -46,4 +46,21 @@
         android:id="@+id/btn_CheckButton_view"
         android:layout_marginTop="30dp"
         android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到ImageView演示页面"
+        android:id="@+id/btn_Image_view"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到ListView演示页面"
+        android:id="@+id/btn_list_view"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"/>
+
 </LinearLayout>
