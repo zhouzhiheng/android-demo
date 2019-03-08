@@ -50,7 +50,7 @@ public class MyListViewAdapter extends BaseAdapter {
 
         ViewHolder viewHolder = null;
         if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.activity_list_item, null);
+            convertView = layoutInflater.inflate(R.layout.layout_list_item, null);
             viewHolder = new ViewHolder();
             viewHolder.imageView = convertView.findViewById(R.id.list_iv);
             viewHolder.tvTitle = convertView.findViewById(R.id.list_tv_title);

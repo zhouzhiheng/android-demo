@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.opsigte.demo.gridview.GridViewActivity;
 import com.opsigte.demo.listView.ListViewActivity;
+import com.opsigte.demo.recyclerview.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCheckButtonView;
     private Button btnImageView;
     private Button btnListView;
+    private Button btnGridView;
+    private Button btnRecyclerView;
 
 
     private void setListeners(){
@@ -28,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         btnCheckButtonView.setOnClickListener(onClick);
         btnImageView.setOnClickListener(onClick);
         btnListView.setOnClickListener(onClick);
+        btnGridView.setOnClickListener(onClick);
+        btnRecyclerView.setOnClickListener(onClick);
 
     }
 
@@ -57,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_list_view:
                     intent = new Intent(MainActivity.this, ListViewActivity.class);
                     break;
+                case R.id.btn_grid_view:
+                    intent = new Intent(MainActivity.this, GridViewActivity.class);
+                    break;
+                case R.id.btn_recycler_view:
+                    intent = new Intent(MainActivity.this, RecyclerActivity.class);
+                    break;
             }
             startActivity(intent);
         }
@@ -75,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
         btnCheckButtonView = findViewById(R.id.btn_CheckButton_view);
         btnImageView = findViewById(R.id.btn_Image_view);
         btnListView = findViewById(R.id.btn_list_view);
+        btnGridView = findViewById(R.id.btn_grid_view);
+        btnRecyclerView = findViewById(R.id.btn_recycler_view);
         setListeners();
     }
 }

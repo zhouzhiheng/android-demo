@@ -12,6 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".recyclerview.RecyclerActivity"/>
+        <activity android:name=".gridview.GridViewActivity" />
         <activity android:name=".listView.ListViewActivity"></activity>
         <activity android:name=".ImageViewActivity"></activity>
         <activity android:name=".CheckButtonActivity"></activity>

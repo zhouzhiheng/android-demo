@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    此时的LinearLayout的layout_height不能设置为match_parent,
+    因为现在的控件的父控件应该是activity_recyclerview,
+    当生成列表时，会循环生成此时的LinearLayout,
+    所以如果设置为match_parent，那么此时的一整个屏幕就只会显示一个LinearLayout
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/item_recycler_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="recycler view"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+</LinearLayout>
