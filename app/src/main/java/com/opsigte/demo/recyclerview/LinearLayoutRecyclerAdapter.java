@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.opsigte.demo.R;
 
@@ -16,15 +15,15 @@ public class LinearLayoutRecyclerAdapter extends RecyclerView.Adapter<LinearLayo
     private Context mContent;
     private OnItemClickListener mListener;
 
-    public LinearLayoutRecyclerAdapter(Context context){
+    public LinearLayoutRecyclerAdapter(Context context,OnItemClickListener listener){
         this.mContent = context;
-        this.mListener = mListener;
+        this.mListener = listener;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_recycler_item, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_linear_recycler_item, viewGroup, false);
         MyViewHolder myViewHolder = new MyViewHolder(inflate);
         return myViewHolder;
     }
