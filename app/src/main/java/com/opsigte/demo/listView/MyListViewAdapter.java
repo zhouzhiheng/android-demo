@@ -46,8 +46,6 @@ public class MyListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Toast.makeText(mContext,"getView",Toast.LENGTH_LONG).show();
-
         ViewHolder viewHolder = null;
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.layout_list_item, null);

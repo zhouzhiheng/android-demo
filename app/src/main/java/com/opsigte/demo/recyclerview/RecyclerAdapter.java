@@ -14,9 +14,11 @@ import com.opsigte.demo.R;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
 
     private Context mContent;
+    private OnItemClickListener mListener;
 
-    public RecyclerAdapter(Context context){
+    public RecyclerAdapter(Context context,OnItemClickListener linstener){
         this.mContent = context;
+        this.mListener = linstener;
     }
 
     @NonNull
@@ -28,13 +30,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder viewHolder, int i) {
-        final int j = i;
+    public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder viewHolder, final int i) {
         // 给控件添加事件
         viewHolder.tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContent, "click pos:" + j, Toast.LENGTH_SHORT).show();
+                mListener.onClick(i);
             }
         });
     }
@@ -51,6 +52,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tv = itemView.findViewById(R.id.item_recycler_tv);
+            tv.setText("linearLayout recycler view");
         }
+    }
+
+    public interface OnItemClickListener{
+        void onClick(int position);
     }
 }
