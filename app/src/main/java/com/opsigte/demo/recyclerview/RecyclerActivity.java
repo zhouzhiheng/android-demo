@@ -1,12 +1,9 @@
 package com.opsigte.demo.recyclerview;
 
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,7 +11,7 @@ import com.opsigte.demo.R;
 
 public class RecyclerActivity extends AppCompatActivity {
 
-    private Button btnRecyclerLinearView,btnRecyclerGridView;
+    private Button btnRecyclerLinearView,btnRecyclerGridView,btnStaggeredView;
 
 
     @Override
@@ -38,6 +35,16 @@ public class RecyclerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RecyclerActivity.this,GridLayoutRecyclerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Staggered Recycler view
+        btnStaggeredView = findViewById(R.id.btn_recycler_staggered_view);
+        btnStaggeredView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecyclerActivity.this,StaggeredGridRecyclerActivity.class);
                 startActivity(intent);
             }
         });
