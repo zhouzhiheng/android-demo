@@ -11,14 +11,14 @@ import android.widget.Toast;
 
 import com.opsigte.demo.R;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
+public class LinearLayoutRecyclerAdapter extends RecyclerView.Adapter<LinearLayoutRecyclerAdapter.MyViewHolder> {
 
     private Context mContent;
     private OnItemClickListener mListener;
 
-    public RecyclerAdapter(Context context,OnItemClickListener linstener){
+    public LinearLayoutRecyclerAdapter(Context context){
         this.mContent = context;
-        this.mListener = linstener;
+        this.mListener = mListener;
     }
 
     @NonNull
@@ -30,7 +30,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapter.MyViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(@NonNull LinearLayoutRecyclerAdapter.MyViewHolder viewHolder, final int i) {
         // 给控件添加事件
         viewHolder.tv.setOnClickListener(new View.OnClickListener() {
             @Override
