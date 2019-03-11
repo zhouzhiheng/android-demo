@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.opsigte.demo.gridview.GridViewActivity;
 import com.opsigte.demo.listView.ListViewActivity;
 import com.opsigte.demo.recyclerview.RecyclerActivity;
+import com.opsigte.demo.toast.ToastActivity;
 import com.opsigte.demo.webview.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnGridView;
     private Button btnRecyclerView;
     private Button btnWebView;
+    private Button btnToastView;
 
     private void setListeners(){
         OnClick onClick = new OnClick();
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btnGridView.setOnClickListener(onClick);
         btnRecyclerView.setOnClickListener(onClick);
         btnWebView.setOnClickListener(onClick);
-
+        btnToastView.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
@@ -74,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_webview_view:
                     intent = new Intent(MainActivity.this, WebViewActivity.class);
                     break;
+                case R.id.btn_toast_view:
+                    intent = new Intent(MainActivity.this, ToastActivity.class);
+                    break;
             }
             startActivity(intent);
         }
@@ -95,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         btnGridView = findViewById(R.id.btn_grid_view);
         btnRecyclerView = findViewById(R.id.btn_recycler_view);
         btnWebView = findViewById(R.id.btn_webview_view);
+        btnToastView = findViewById(R.id.btn_toast_view);
         setListeners();
     }
 }
