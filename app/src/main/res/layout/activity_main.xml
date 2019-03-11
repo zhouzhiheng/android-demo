@@ -82,6 +82,14 @@
             android:id="@+id/btn_recycler_view"
             android:layout_marginTop="30dp"
             android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="跳转到WebView演示页面"
+            android:id="@+id/btn_webview_view"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false"/>
     </LinearLayout>
 
 
