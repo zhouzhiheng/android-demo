@@ -11,7 +11,7 @@ import com.opsigte.demo.R;
 
 public class RecyclerActivity extends AppCompatActivity {
 
-    private Button btnRecyclerLinearView,btnRecyclerGridView,btnStaggeredView;
+    private Button btnRecyclerLinearView,btnRecyclerGridView,btnStaggeredView,btnViewHolderView;
 
 
     @Override
@@ -45,6 +45,16 @@ public class RecyclerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RecyclerActivity.this,StaggeredGridRecyclerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // ViewHolder Recycler view
+        btnViewHolderView = findViewById(R.id.btn_recycler_viewholder_view);
+        btnViewHolderView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecyclerActivity.this,ViewHolderRecyclerActivity.class);
                 startActivity(intent);
             }
         });

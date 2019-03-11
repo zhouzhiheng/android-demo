@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    此时的LinearLayout的layout_height不能设置为match_parent,
+    因为现在的控件的父控件应该是activity_recyclerview,
+    当生成列表时，会循环生成此时的LinearLayout,
+    所以如果设置为match_parent，那么此时的一整个屏幕就只会显示一个LinearLayout
+-->
+
+<!--
+    1.如果不设置LinearLayout背景颜色，则，屏幕显示的是整个父控件
+    (activity_recyclerview.xml)的 RecyclerView控件的背景颜色；
+    2.如果不设置父控件的背景颜色，则设置的下划线是看不清楚的（其实是存在的）
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/colorWhite">
+
+
+    <TextView
+        android:id="@+id/view_holder_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="20sp"/>
+
+</LinearLayout>
