@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/jump_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到下一个Activity"
+        android:textSize="15sp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/jump_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到下一个Activity并传值"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/jump_btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到下一个Activity传值并接受返回值"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/jump_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="初始化activity值"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+
+
+    <Button
+        android:id="@+id/jump_btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="调用系统打电话页面"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

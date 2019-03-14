@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.opsigte.demo.gridview.GridViewActivity;
+import com.opsigte.demo.jump.ActivityJumpActivity;
 import com.opsigte.demo.listView.ListViewActivity;
 import com.opsigte.demo.recyclerview.RecyclerActivity;
 import com.opsigte.demo.toast.ToastActivity;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnRecyclerView;
     private Button btnWebView;
     private Button btnToastView;
+    private Button btnJumpView;
 
     private void setListeners(){
         OnClick onClick = new OnClick();
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         btnRecyclerView.setOnClickListener(onClick);
         btnWebView.setOnClickListener(onClick);
         btnToastView.setOnClickListener(onClick);
+        btnJumpView.setOnClickListener(onClick);
+
     }
 
     private class OnClick implements View.OnClickListener{
@@ -79,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_toast_view:
                     intent = new Intent(MainActivity.this, ToastActivity.class);
                     break;
+                case R.id.btn_jump_view:
+                    intent = new Intent(MainActivity.this, ActivityJumpActivity.class);
+                    break;
             }
             startActivity(intent);
         }
@@ -101,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         btnRecyclerView = findViewById(R.id.btn_recycler_view);
         btnWebView = findViewById(R.id.btn_webview_view);
         btnToastView = findViewById(R.id.btn_toast_view);
+        btnJumpView = findViewById(R.id.btn_jump_view);
         setListeners();
     }
 }
