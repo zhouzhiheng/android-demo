@@ -13,7 +13,7 @@ import com.opsigte.demo.R;
 public class ActivityJump2Activity extends AppCompatActivity {
 
     private TextView tv1, tv2;
-    private Button btn;
+    private Button btn, btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,21 @@ public class ActivityJump2Activity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                /**
+                 * 1.这种情况，会调用要跳转的Activity的onCreate方法
+                 * 2.使用setResult()方法或者点击系统的返回键,都不会调用要跳转的Activity的onCreate方法
+                 */
+                Intent intent = new Intent(ActivityJump2Activity.this, ActivityJumpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn2 = findViewById(R.id.jump2_btn2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
                 /**
                  * 此时，没有Inter也可以使用setResult返回到上一个Activity，但是必须使用finish()
                  */
@@ -46,6 +61,7 @@ public class ActivityJump2Activity extends AppCompatActivity {
 //                finish();
 
 
+                // 设置返回的值
                 Intent intent = new Intent(ActivityJump2Activity.this, ActivityJumpActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("resValue", "我返回给你了");
@@ -54,6 +70,5 @@ public class ActivityJump2Activity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }

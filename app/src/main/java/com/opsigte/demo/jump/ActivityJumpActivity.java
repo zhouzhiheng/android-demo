@@ -22,6 +22,7 @@ public class ActivityJumpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jump);
 
+        Log.d("onCreate", "------onCreate------");
         tv = findViewById(R.id.jump_tv1);
 
         jumpBtn = findViewById(R.id.jump_btn1);
