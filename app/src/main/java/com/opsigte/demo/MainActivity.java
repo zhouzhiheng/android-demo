@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.opsigte.demo.fragment.ContainerActivity;
 import com.opsigte.demo.gridview.GridViewActivity;
 import com.opsigte.demo.jump.ActivityJumpActivity;
 import com.opsigte.demo.listView.ListViewActivity;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnWebView;
     private Button btnToastView;
     private Button btnJumpView;
+    private Button btnFragmentView;
 
     private void setListeners(){
         OnClick onClick = new OnClick();
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         btnWebView.setOnClickListener(onClick);
         btnToastView.setOnClickListener(onClick);
         btnJumpView.setOnClickListener(onClick);
+        btnFragmentView.setOnClickListener(onClick);
 
     }
 
@@ -86,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_jump_view:
                     intent = new Intent(MainActivity.this, ActivityJumpActivity.class);
                     break;
+                case R.id.btn_fragment_view:
+                    intent = new Intent(MainActivity.this, ContainerActivity.class);
+                    break;
             }
             startActivity(intent);
         }
@@ -109,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
         btnWebView = findViewById(R.id.btn_webview_view);
         btnToastView = findViewById(R.id.btn_toast_view);
         btnJumpView = findViewById(R.id.btn_jump_view);
+        btnFragmentView = findViewById(R.id.btn_fragment_view);
         setListeners();
     }
 }

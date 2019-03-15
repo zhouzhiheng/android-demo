@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/change_btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击更换Activity组件值"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/change_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击更换为BFragment"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/change_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击更换TextView文字"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textAllCaps="false"/>
+
+
+    <TextView
+        android:id="@+id/afragment_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+
+</LinearLayout>

@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.opsigte.demo">
     <!-- 访问Internet权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--打电话权限-->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 打电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -13,15 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".fragment.ContainerActivity"></activity>
         <activity android:name=".jump.ActivityJump2Activity">
             <intent-filter>
-                <!--隐式跳转必须设置android:name-->
-                <action android:name="com.opsigte.demo.jump.ActivityJump2Activity"></action>
-                <!--隐式跳转必须设置DEFAULT的-->
-                <category android:name="android.intent.category.DEFAULT"></category>
+
+                <!-- 隐式跳转必须设置android:name -->
+                <action android:name="com.opsigte.demo.jump.ActivityJump2Activity" />
+                <!-- 隐式跳转必须设置DEFAULT的 -->
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".jump.ActivityJumpActivity"
+        <activity
+            android:name=".jump.ActivityJumpActivity"
             android:label="1Label"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
